@@ -1,8 +1,7 @@
 
 import Vapor
 
-let slackToken = "xoxb-304979555265-YxjCiaAccThz97yDXAAFBx9l"
-
+let slackToken = "xoxb-304979555265-bEkdVs0UhPAMK1FMO5R3tNpC"
 
 let drop = try Droplet()
 
