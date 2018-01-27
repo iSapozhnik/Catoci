@@ -33,7 +33,8 @@ class Catoci {
         self.commandFacoty = CommandFactory(commands: [
             HelloCommand(),
             CircleCiCommand(),
-            ConversationCommand()
+            ConversationCommand(),
+            TimerCommand()
         ])
         
         self.commandProcessor = CommandProcessor(factory: self.commandFacoty)
