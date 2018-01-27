@@ -20,6 +20,7 @@
 		FF56C7FA201BEE5100B94CCE /* CircleCiCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56C7F9201BEE5100B94CCE /* CircleCiCommand.swift */; };
 		FF56C801201CB39B00B94CCE /* CircleCIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56C800201CB39B00B94CCE /* CircleCIClient.swift */; };
 		FF56C803201CB3AD00B94CCE /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56C802201CB3AD00B94CCE /* Configuration.swift */; };
+		FF56C806201CB84600B94CCE /* ConversationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56C805201CB84600B94CCE /* ConversationCommand.swift */; };
 		OBJ_1000 /* Response+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_384 /* Response+Async.swift */; };
 		OBJ_1001 /* Body+Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_386 /* Body+Bytes.swift */; };
 		OBJ_1002 /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_387 /* Body.swift */; };
@@ -3200,6 +3201,7 @@
 		FF56C7F9201BEE5100B94CCE /* CircleCiCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleCiCommand.swift; sourceTree = "<group>"; };
 		FF56C800201CB39B00B94CCE /* CircleCIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleCIClient.swift; sourceTree = "<group>"; };
 		FF56C802201CB3AD00B94CCE /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		FF56C805201CB84600B94CCE /* ConversationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCommand.swift; sourceTree = "<group>"; };
 		OBJ_100 /* HTTP+Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTP+Node.swift"; sourceTree = "<group>"; };
 		OBJ_101 /* RequestInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestInitializable.swift; sourceTree = "<group>"; };
 		OBJ_103 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
@@ -4298,6 +4300,7 @@
 		FF56C7ED201BDC0D00B94CCE /* Commands */ = {
 			isa = PBXGroup;
 			children = (
+				FF56C804201CB83B00B94CCE /* Conversation */,
 				FF56C7F8201BEE4900B94CCE /* CircleCI */,
 				FF56C7F5201BDF9200B94CCE /* DidntGetCommand */,
 				FF56C7EE201BDC0D00B94CCE /* HelloCommand */,
@@ -4336,6 +4339,14 @@
 				FF56C802201CB3AD00B94CCE /* Configuration.swift */,
 			);
 			path = CircleCI;
+			sourceTree = "<group>";
+		};
+		FF56C804201CB83B00B94CCE /* Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				FF56C805201CB84600B94CCE /* ConversationCommand.swift */,
+			);
+			path = Conversation;
 			sourceTree = "<group>";
 		};
 		OBJ_10 /* Tests */ = {
@@ -7252,6 +7263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FF56C806201CB84600B94CCE /* ConversationCommand.swift in Sources */,
 				FF56C801201CB39B00B94CCE /* CircleCIClient.swift in Sources */,
 				FF56C7F7201BDFA300B94CCE /* DidntGetCommand.swift in Sources */,
 				FF56C7F2201BDDEA00B94CCE /* CommandProcessor.swift in Sources */,

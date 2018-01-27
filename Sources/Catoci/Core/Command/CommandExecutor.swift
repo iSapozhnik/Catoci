@@ -10,27 +10,63 @@ import Foundation
 
 class CommandExecutor {
     
+    var executingConversaition: Bool {
+        return currentConversationCommand != nil
+    }
+    
+    private var currentConversationCommand: Command?
+    
     func execute(_ commands: [ExecutableCommand], replyingTo originalSender: MessageSender) {
         for executable in commands {
             
-            var sender = originalSender
+            let command = executable.command
+            
+
+            
 //            if commands.count > 1 {
 //                sender = PrefixedMessageSender(prefix: "[\(executable.command.name)]", sender: originalSender)
 //            }
             
             if executable.parameters.first == .some("usage") {
-                sender.send(executable.command.usage ?? "Wrong command")
+                originalSender.send(executable.command.usage ?? "Wrong command")
             } else if executable.parameters.first == .some("description") {
-                sender.send(executable.command.description ?? "Wrong command")
+                originalSender.send(executable.command.description ?? "Wrong command")
             } else {
                 do {
-                    try executable.command.execute(with: executable.parameters, replyingTo: sender)
+                    try executable.command.execute(with: executable.parameters, replyingTo: originalSender)
+                    if command.isConversation && !command.conversationEnded {
+                        "saving command coz it is conversation".log()
+                        currentConversationCommand = command
+                    }
+                    if let nextQuestion = command.unansweredQuestion {
+                        originalSender.send(nextQuestion.question)
+                    }
                 } catch {
-                    sender.send(error.userFriendlyMessage)
+                    originalSender.send(error.userFriendlyMessage)
                     break
                 }
             }
         }
     }
     
+    func executeConversation(from message: String, replyingTo originalSender: MessageSender) {
+        guard let command = currentConversationCommand else {
+            return
+        }
+        
+        var conversation = command.unansweredQuestion
+        conversation?.answer = message
+        
+        if let nextQuestion = command.unansweredQuestion {
+            originalSender.send(nextQuestion.question)
+        } else {
+            var message = ""
+            command.conversation.forEach { conversation in
+                message.append("I asked *\(conversation.question)*\nYou answered *\(conversation.answer!)*\n")
+            }
+            originalSender.send(message)
+            command.restartConversation()
+            currentConversationCommand = nil
+        }
+    }
 }

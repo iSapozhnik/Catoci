@@ -24,6 +24,10 @@ class CircleCiCommand: Command {
         return ""
     }
     
+    var conversation: [Conversation] {
+        return []
+    }
+    
     func execute(with parameters: [String], replyingTo sender: MessageSender) throws {
         sender.send("😼 Executing `\(name ?? "ci")` command...")
         
@@ -31,4 +35,6 @@ class CircleCiCommand: Command {
             sender.send("😺 found: \(response)")
         }
     }
+    
+    func restartConversation() {}
 }

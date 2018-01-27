@@ -8,11 +8,33 @@
 
 import Foundation
 
+protocol Conversation {
+    var question: String { get }
+    var answer: String? { get set }
+//    mutating func  updateAnswer(_ answer: String)
+}
+
 protocol Command {
     var name: String? { get }
     var description: String? { get }
     var usage: String? { get }
+    var conversation: [Conversation] { get }
     func execute(with parameters: [String], replyingTo sender: MessageSender) throws
+    func restartConversation()
+}
+
+extension Command {
+    var isConversation: Bool {
+        return conversation.count > 0
+    }
+    
+    var conversationEnded: Bool {
+        return conversation.count == 0 || conversation.filter { $0.answer == nil }.count == 0
+    }
+    
+    var unansweredQuestion: Conversation? {
+        return conversation.filter { $0.answer == nil }.first
+    }
 }
 
 struct ExecutableCommand {

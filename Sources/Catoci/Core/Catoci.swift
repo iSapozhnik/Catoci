@@ -32,7 +32,8 @@ class Catoci {
         
         self.commandFacoty = CommandFactory(commands: [
             HelloCommand(),
-            CircleCiCommand()
+            CircleCiCommand(),
+            ConversationCommand()
         ])
         
         self.commandProcessor = CommandProcessor(factory: self.commandFacoty)
@@ -42,24 +43,31 @@ class Catoci {
     public func start() throws {
         try self.slackClient.connect { (message, sender) in
             
-            do {
-                let commands = try self.commandProcessor.executableCommands(from: message)
-                "commands: \(commands)".log()
-                if commands.count > 0 {
-                    self.commandExecutor.execute(commands, replyingTo: sender)
-                } else {
-                    let didntGet = ExecutableCommand(command: DidntGetCommand(), parameters: [])
-                    self.commandExecutor.execute([didntGet], replyingTo: sender)
-                }
-            } catch {
-                "catching exception".log()
-                if let processingError = error as? CommandProcessor.ProcessingError {
-                    let errorMessage = "😿 Could not find command with name `\(processingError.commandName)`.\n"
-                        + self.commandFacoty.availableCommands
-                        + "\nIf you want to know more about a command, you can do:\n`{command} usage`"
-                    sender.send(errorMessage)
-                } else {
-                    sender.send(error.userFriendlyMessage)
+            if self.commandExecutor.executingConversaition {
+                "executingConversaition".log()
+                self.commandExecutor.executeConversation(from: message, replyingTo: sender)
+                
+            } else {
+            
+                do {
+                    let commands = try self.commandProcessor.executableCommands(from: message)
+                    "commands: \(commands)".log()
+                    if commands.count > 0 {
+                        self.commandExecutor.execute(commands, replyingTo: sender)
+                    } else {
+                        let didntGet = ExecutableCommand(command: DidntGetCommand(), parameters: [])
+                        self.commandExecutor.execute([didntGet], replyingTo: sender)
+                    }
+                } catch {
+                    "catching exception".log()
+                    if let processingError = error as? CommandProcessor.ProcessingError {
+                        let errorMessage = "😿 Could not find command with name `\(processingError.commandName)`.\n"
+                            + self.commandFacoty.availableCommands
+                            + "\nIf you want to know more about a command, you can do:\n`{command} usage`"
+                        sender.send(errorMessage)
+                    } else {
+                        sender.send(error.userFriendlyMessage)
+                    }
                 }
             }
         }

@@ -21,7 +21,13 @@ class HelloCommand: Command {
         return "Just type `hello` and I will reply"
     }
     
+    var conversation: [Conversation] {
+        return []
+    }
+    
     func execute(with parameters: [String], replyingTo sender: MessageSender) throws {
         sender.send("😽 Hi there...")
     }
+    
+    func restartConversation() {}
 }
