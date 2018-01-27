@@ -9,5 +9,5 @@
 import Foundation
 
 struct Configuration {
-    static let token: String = "25b85f27223170432a16eb48d6773e1ce6ba7b0b"
+    static let token: String = ""
 }
