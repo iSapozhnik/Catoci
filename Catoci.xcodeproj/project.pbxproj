@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF56C650201BCDCC00B94CCE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56C64F201BCDCC00B94CCE /* main.swift */; };
+		FF56C652201BCE0300B94CCE /* Catoci.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56C651201BCE0300B94CCE /* Catoci.swift */; };
+		FF56C7E4201BCFEA00B94CCE /* SlackClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56C7E3201BCFEA00B94CCE /* SlackClient.swift */; };
+		FF56C7E6201BD0D400B94CCE /* SlackMessageSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56C7E5201BD0D400B94CCE /* SlackMessageSender.swift */; };
+		FF56C7E9201BD18C00B94CCE /* ErrorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56C7E8201BD18C00B94CCE /* ErrorUtility.swift */; };
+		FF56C7EC201BDAB400B94CCE /* CommandFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56C7EB201BDAB400B94CCE /* CommandFactory.swift */; };
+		FF56C7F0201BDC4300B94CCE /* HelloCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56C7EF201BDC4300B94CCE /* HelloCommand.swift */; };
+		FF56C7F2201BDDEA00B94CCE /* CommandProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56C7F1201BDDEA00B94CCE /* CommandProcessor.swift */; };
+		FF56C7F4201BDE4700B94CCE /* CommandExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56C7F3201BDE4700B94CCE /* CommandExecutor.swift */; };
+		FF56C7F7201BDFA300B94CCE /* DidntGetCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56C7F6201BDFA300B94CCE /* DidntGetCommand.swift */; };
+		FF56C7FA201BEE5100B94CCE /* CircleCiCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56C7F9201BEE5100B94CCE /* CircleCiCommand.swift */; };
+		FF56C801201CB39B00B94CCE /* CircleCIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56C800201CB39B00B94CCE /* CircleCIClient.swift */; };
+		FF56C803201CB3AD00B94CCE /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56C802201CB3AD00B94CCE /* Configuration.swift */; };
 		OBJ_1000 /* Response+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_384 /* Response+Async.swift */; };
 		OBJ_1001 /* Body+Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_386 /* Body+Bytes.swift */; };
 		OBJ_1002 /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_387 /* Body.swift */; };
@@ -551,7 +564,6 @@
 		OBJ_1849 /* Multipart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_623 /* Multipart.framework */; };
 		OBJ_1850 /* FormData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_624 /* FormData.framework */; };
 		OBJ_1851 /* BCrypt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_625 /* BCrypt.framework */; };
-		OBJ_1881 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
 		OBJ_1883 /* Bits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_602 /* Bits.framework */; };
 		OBJ_1884 /* Debugging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_603 /* Debugging.framework */; };
 		OBJ_1885 /* libc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_604 /* libc.framework */; };
@@ -3175,6 +3187,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF56C64F201BCDCC00B94CCE /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		FF56C651201BCE0300B94CCE /* Catoci.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Catoci.swift; sourceTree = "<group>"; };
+		FF56C7E3201BCFEA00B94CCE /* SlackClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackClient.swift; sourceTree = "<group>"; };
+		FF56C7E5201BD0D400B94CCE /* SlackMessageSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackMessageSender.swift; sourceTree = "<group>"; };
+		FF56C7E8201BD18C00B94CCE /* ErrorUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorUtility.swift; sourceTree = "<group>"; };
+		FF56C7EB201BDAB400B94CCE /* CommandFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandFactory.swift; sourceTree = "<group>"; };
+		FF56C7EF201BDC4300B94CCE /* HelloCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloCommand.swift; sourceTree = "<group>"; };
+		FF56C7F1201BDDEA00B94CCE /* CommandProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandProcessor.swift; sourceTree = "<group>"; };
+		FF56C7F3201BDE4700B94CCE /* CommandExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandExecutor.swift; sourceTree = "<group>"; };
+		FF56C7F6201BDFA300B94CCE /* DidntGetCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DidntGetCommand.swift; sourceTree = "<group>"; };
+		FF56C7F9201BEE5100B94CCE /* CircleCiCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleCiCommand.swift; sourceTree = "<group>"; };
+		FF56C800201CB39B00B94CCE /* CircleCIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleCIClient.swift; sourceTree = "<group>"; };
+		FF56C802201CB3AD00B94CCE /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		OBJ_100 /* HTTP+Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTP+Node.swift"; sourceTree = "<group>"; };
 		OBJ_101 /* RequestInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestInitializable.swift; sourceTree = "<group>"; };
 		OBJ_103 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
@@ -3649,7 +3674,6 @@
 		OBJ_86 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		OBJ_87 /* FileMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileMiddleware.swift; sourceTree = "<group>"; };
 		OBJ_89 /* Request+FormURLEncoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request+FormURLEncoded.swift"; sourceTree = "<group>"; };
-		OBJ_9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		OBJ_90 /* StructuredData+FormURLEncoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StructuredData+FormURLEncoded.swift"; sourceTree = "<group>"; };
 		OBJ_92 /* BCryptHasher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCryptHasher.swift; sourceTree = "<group>"; };
 		OBJ_93 /* Config+Hash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Config+Hash.swift"; sourceTree = "<group>"; };
@@ -4213,6 +4237,107 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF56C64C201BCDCC00B94CCE /* Catoci */ = {
+			isa = PBXGroup;
+			children = (
+				FF56C64D201BCDCC00B94CCE /* Core */,
+				FF56C7E7201BD18300B94CCE /* API */,
+				FF56C7ED201BDC0D00B94CCE /* Commands */,
+			);
+			name = Catoci;
+			path = Sources/Catoci;
+			sourceTree = "<group>";
+		};
+		FF56C64D201BCDCC00B94CCE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FF56C651201BCE0300B94CCE /* Catoci.swift */,
+				FF56C7EA201BDAAA00B94CCE /* Command */,
+				FF56C7E2201BCFDF00B94CCE /* Slack */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FF56C64E201BCDCC00B94CCE /* CatociMain */ = {
+			isa = PBXGroup;
+			children = (
+				FF56C64F201BCDCC00B94CCE /* main.swift */,
+			);
+			name = CatociMain;
+			path = Sources/CatociMain;
+			sourceTree = "<group>";
+		};
+		FF56C7E2201BCFDF00B94CCE /* Slack */ = {
+			isa = PBXGroup;
+			children = (
+				FF56C7E3201BCFEA00B94CCE /* SlackClient.swift */,
+				FF56C7E5201BD0D400B94CCE /* SlackMessageSender.swift */,
+			);
+			path = Slack;
+			sourceTree = "<group>";
+		};
+		FF56C7E7201BD18300B94CCE /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FF56C7FF201CB39B00B94CCE /* CircleCI */,
+				FF56C7E8201BD18C00B94CCE /* ErrorUtility.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FF56C7EA201BDAAA00B94CCE /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				FF56C7EB201BDAB400B94CCE /* CommandFactory.swift */,
+				FF56C7F1201BDDEA00B94CCE /* CommandProcessor.swift */,
+				FF56C7F3201BDE4700B94CCE /* CommandExecutor.swift */,
+			);
+			path = Command;
+			sourceTree = "<group>";
+		};
+		FF56C7ED201BDC0D00B94CCE /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				FF56C7F8201BEE4900B94CCE /* CircleCI */,
+				FF56C7F5201BDF9200B94CCE /* DidntGetCommand */,
+				FF56C7EE201BDC0D00B94CCE /* HelloCommand */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		FF56C7EE201BDC0D00B94CCE /* HelloCommand */ = {
+			isa = PBXGroup;
+			children = (
+				FF56C7EF201BDC4300B94CCE /* HelloCommand.swift */,
+			);
+			path = HelloCommand;
+			sourceTree = "<group>";
+		};
+		FF56C7F5201BDF9200B94CCE /* DidntGetCommand */ = {
+			isa = PBXGroup;
+			children = (
+				FF56C7F6201BDFA300B94CCE /* DidntGetCommand.swift */,
+			);
+			path = DidntGetCommand;
+			sourceTree = "<group>";
+		};
+		FF56C7F8201BEE4900B94CCE /* CircleCI */ = {
+			isa = PBXGroup;
+			children = (
+				FF56C7F9201BEE5100B94CCE /* CircleCiCommand.swift */,
+			);
+			path = CircleCI;
+			sourceTree = "<group>";
+		};
+		FF56C7FF201CB39B00B94CCE /* CircleCI */ = {
+			isa = PBXGroup;
+			children = (
+				FF56C800201CB39B00B94CCE /* CircleCIClient.swift */,
+				FF56C802201CB3AD00B94CCE /* Configuration.swift */,
+			);
+			path = CircleCI;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -5790,7 +5915,8 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_8 /* Catoci */,
+				FF56C64C201BCDCC00B94CCE /* Catoci */,
+				FF56C64E201BCDCC00B94CCE /* CatociMain */,
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -5817,15 +5943,6 @@
 			);
 			path = Error;
 			sourceTree = "<group>";
-		};
-		OBJ_8 /* Catoci */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_9 /* main.swift */,
-			);
-			name = Catoci;
-			path = Sources/Catoci;
-			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_81 /* Event */ = {
 			isa = PBXGroup;
@@ -7135,7 +7252,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_1881 /* main.swift in Sources */,
+				FF56C801201CB39B00B94CCE /* CircleCIClient.swift in Sources */,
+				FF56C7F7201BDFA300B94CCE /* DidntGetCommand.swift in Sources */,
+				FF56C7F2201BDDEA00B94CCE /* CommandProcessor.swift in Sources */,
+				FF56C7E9201BD18C00B94CCE /* ErrorUtility.swift in Sources */,
+				FF56C7F0201BDC4300B94CCE /* HelloCommand.swift in Sources */,
+				FF56C652201BCE0300B94CCE /* Catoci.swift in Sources */,
+				FF56C650201BCDCC00B94CCE /* main.swift in Sources */,
+				FF56C803201CB3AD00B94CCE /* Configuration.swift in Sources */,
+				FF56C7E4201BCFEA00B94CCE /* SlackClient.swift in Sources */,
+				FF56C7EC201BDAB400B94CCE /* CommandFactory.swift in Sources */,
+				FF56C7E6201BD0D400B94CCE /* SlackMessageSender.swift in Sources */,
+				FF56C7FA201BEE5100B94CCE /* CircleCiCommand.swift in Sources */,
+				FF56C7F4201BDE4700B94CCE /* CommandExecutor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
