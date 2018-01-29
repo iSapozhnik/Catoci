@@ -1,1 +1,1 @@
-# Catoci
+# Catoci 😺 - Circle CI slack bot
